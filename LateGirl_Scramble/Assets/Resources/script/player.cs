@@ -108,6 +108,8 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
+        SetAnime("groundtorriger");
         isGorl = false;
         backSpeed = GameObject.Find("BackGround").gameObject.GetComponent<BackSpeed>();
         audio = GetComponent<AudioSource>();

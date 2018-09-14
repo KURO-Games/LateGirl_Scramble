@@ -11,10 +11,12 @@ public class Item : MonoBehaviour {
     
     private Player player;
     public ItemType itemName;//アイテムの名前を入れる箱
-
+    private float positionY;
+    float up;
     private void Awake()
     {
-        
+        positionY = transform.position.y;
+        up = -0.01f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -35,6 +37,18 @@ public class Item : MonoBehaviour {
             return 2;
         }
         return 0;
+    }
+    private void Update()
+    {
+        if (positionY + 0.5f < transform.position.y)
+        {
+            up = -0.01f;
+        }
+        if (positionY - 0.5f > transform.position.y)
+        {
+            up = 0.01f;
+        }
+        transform.Translate(0, up, 0);
     }
 
 }

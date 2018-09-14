@@ -88,7 +88,7 @@ public class BackGroundMove : MonoBehaviour {
 
             ParentObject.transform.parent = transform;
             // 幅2個数分だけ右へ移動
-            ParentObject.transform.position = new Vector3(37.3f, yDebug, 0);
+            ParentObject.transform.position = new Vector3(37.0f+ (73.41f- 74.42117f), yDebug, 0);
             //pattern[rand].transform.position = new Vector3(44.8f, 12.7f-1.0f, 0);
             warpScript[rand].EndFalse();
             isChange = false;

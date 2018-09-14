@@ -974,7 +974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8ae9080c62b4445ad37fb88673c5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showSprite: {fileID: 0}
   numberImages:
   - {fileID: 1512643784}
   - {fileID: 323959823}
@@ -987,9 +986,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b62906f4d9db518458d25b144b9f7c68, type: 3}
   - {fileID: 21300000, guid: 6c3b4ed169a222f4f8112e018a1ef575, type: 3}
   countLimit: 0
-  num: 0
-  digit: 16
-  zeroFill: 0
   spriteNumbers:
   - {fileID: 21300000, guid: 4c6dbe7108cdeae4093a3917f384e18b, type: 3}
   - {fileID: 21300000, guid: cd3964a6c3034bf498860e07e3ae0f0d, type: 3}
@@ -1984,6 +1980,10 @@ Prefab:
     - target: {fileID: 1090622310119630, guid: 44a379c1c16434850bf3b02c28a0e907, type: 2}
       propertyPath: m_Name
       value: Canvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090622310119630, guid: 44a379c1c16434850bf3b02c28a0e907, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44a379c1c16434850bf3b02c28a0e907, type: 2}

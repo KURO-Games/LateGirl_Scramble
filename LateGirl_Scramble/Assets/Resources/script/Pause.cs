@@ -24,6 +24,7 @@ public class Pause : MonoBehaviour
     private void Start()
     {
         arrowPoint = 1;
+        arrow.transform.position = new Vector3(arrow.transform.position.x, contenue.transform.position.y, arrow.transform.position.z);
         pauseUI.SetActive(false);
     }
 
@@ -56,8 +57,9 @@ public class Pause : MonoBehaviour
     }
     public void PauseActive()
     {
-
+        // 矢印の位置を一番上に
         arrowPoint = 1;
+        arrow.transform.position = new Vector3(arrow.transform.position.x, contenue.transform.position.y, arrow.transform.position.z);
         //　ポーズUIのアクティブ、非アクティブを切り替え
         pauseUI.SetActive(!pauseUI.activeSelf);
 
