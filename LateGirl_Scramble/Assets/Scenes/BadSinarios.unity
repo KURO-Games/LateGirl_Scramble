@@ -213,7 +213,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1090622310119630, guid: 44a379c1c16434850bf3b02c28a0e907, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44a379c1c16434850bf3b02c28a0e907, type: 2}
@@ -258,6 +258,9 @@ MonoBehaviour:
   push: 0
   MVol: 1
   fadeAudio: 0.01
+  pushtime: 0
+  pushset: 2
+  pushtimedelta: 0
 --- !u!212 &297944400
 SpriteRenderer:
   m_ObjectHideFlags: 0

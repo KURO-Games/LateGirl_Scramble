@@ -24,8 +24,12 @@ public class sprite : MonoBehaviour
     [SerializeField]
     private float fadeAudio = 0.01f;
     SpriteRenderer MainSpriteRenderer;
-
-
+    [SerializeField]
+    private bool pushtime;
+    [SerializeField]
+    private float pushset=3.0f;
+    [SerializeField]
+    private float pushtimedelta;
     // Use this for initialization
     void Start()
     {
@@ -49,10 +53,42 @@ public class sprite : MonoBehaviour
         }
         if (!flag)
         {
+            /*
+            
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
             {
+                if(Input.GetMouseButton(0)=3>||Input.GetKey(KeyCode.Space)||Input.GetKey(KeyCode.Return)) 
+
+
+            }
+            */
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)){
+                pushtimedelta = 0f;
+                pushtime = true;  
+
+            }
+            if (pushtime)
+            {
+                pushtimedelta += Time.deltaTime;
+            }
+            if (Input.GetMouseButtonUp(0) || Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Return))
+            {
+                pushtime = false;
+                if (pushtimedelta<pushset){
+                    getk();
+                }else{
+                    SceneLoadManager.LoadScene(nextscene);
+                }
+            }
+
+        }
+
+
+
+    }
+    private void getk(){
                 num++;
-                if (num < SinarioSprite.Count)
+                if (num<SinarioSprite.Count)
                 {
 
                     //image.sprite = SinarioSprite[num];
@@ -66,9 +102,5 @@ public class sprite : MonoBehaviour
                     flag = true;
                     SceneLoadManager.LoadScene(nextscene);
                 }
-
-            }
         }
-
-    }
 }
