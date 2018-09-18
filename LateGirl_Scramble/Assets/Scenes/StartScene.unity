@@ -723,11 +723,6 @@ Prefab:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 114807925781660366, guid: 44a379c1c16434850bf3b02c28a0e907,
-        type: 2}
-      propertyPath: m_Text
-      value: LGS20180918-02
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44a379c1c16434850bf3b02c28a0e907, type: 2}
   m_IsPrefabParent: 0
